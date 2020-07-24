@@ -1,11 +1,12 @@
-在需要使用的go文件中加入以下两行，其中src具体设置成对应的目录
+打包工具statik多包使用的一个demo  
+在需要使用的go文件中加入以下两行，其中src具体设置成对应的目录  
 ```
 //go:generate statik -src=../assets
 //go:generate go fmt statik/statik.go
 
 ```
------------------
-项目结构
+
+## 项目结构
 ```
 .
 ├── assets
@@ -22,8 +23,7 @@
         └── statik.go
 ```
 
--------------------
-build
+## build
 
 ```
 go get github.com/rakyll/statik
@@ -32,5 +32,5 @@ go generate
 go build -o ./bin/testStatik ./cmd
 
 ```
-参考
+## 参考
 https://blog.fatedier.com/2016/08/01/compile-assets-into-binary-file-with-statik-in-golang/
